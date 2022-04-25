@@ -3,7 +3,6 @@ import pandas as pd
 class CleanTweets:
     """
     This class is responsible for cleaning the twitter dataframe
-
     Returns:
     --------
     A dataframe
@@ -61,5 +60,5 @@ class CleanTweets:
         return self.df
 
 if __name__ == "__main__":
-    tweet_df = pd.read_csv("../data/covid19.csv")
+    tweet_df = pd.read_json("../data/Economic_Twitter_Data.json")
     cleaner = CleanTweets(tweet_df)
