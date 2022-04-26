@@ -189,10 +189,10 @@ def find_full_text(self)->list:
 
 if __name__ == "__main__":
     
-    _, tweet_list = read_json("C:/Users/Marta/Twitter-Data-Analysis/data/Economic_Twitter_Data/Economic_Twitter_Data.json")
+    _, tweet_list = read_json("./data/Economic_Twitter_Data.json")
     
     tweet = TweetDfExtractor(tweet_list)
-    df = tweet.find_statuses_count()
+    df = tweet.read_json()
     print(df)
    
     #print(cleaner.find_full_text(df=pd.DataFrame))
